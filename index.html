@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FSBI — For Sale By Intelligence | AI-Powered FSBO in NYC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="FSBI (For Sale By Intelligence) helps NYC homeowners sell FSBO using AI agents and LLMs for pricing, marketing, buyer screening, and attorney coordination." />
+  <meta name="color-scheme" content="light dark" />
+  <!-- Favicon: Simple FSBI house icon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%236f7dff' d='M8 36 32 12l24 24v16a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4z'/%3E%3Cpath fill='%23ffffff' d='M23 44h18v12H23zM18 33l14-14 14 14v23H18z'/%3E%3C/svg%3E">
+  <style>
+    :root{
+      --bg:#0f1320; --card:#151a2c; --text:#e8ecf4; --muted:#a7b0c0;
+      --brand:#6f7dff; --brand2:#19d4ff; --accent:#16c784;
+      --border: rgba(255,255,255,.12); --radius:14px; --max:980px;
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#ffffff; --card:#f6f8fb; --text:#141a25; --muted:#566079; --border:rgba(20,26,37,.12); }
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--text);
+      background:
+        radial-gradient(900px 600px at 90% -10%, rgba(111,125,255,.18), transparent 60%),
+        radial-gradient(800px 500px at -10% 10%, rgba(25,212,255,.18), transparent 55%),
+        var(--bg);}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:20px}
+    header{position:sticky;top:0;z-index:10;backdrop-filter:saturate(1.1) blur(10px);
+      border-bottom:1px solid var(--border); background:color-mix(in oklab, var(--bg) 88%, transparent)}
+    .row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+    .logo svg{width:120px;height:auto}
+    nav{display:flex;gap:18px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;border:1px solid var(--border)}
+    .btn--brand{border:none;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff}
+    .hero{padding:64px 20px 24px}
+    h1{font-size:clamp(28px,4.4vw,52px);line-height:1.06;margin:.3rem 0}
+    .sub{color:var(--muted);max-width:62ch}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+    .card{background:linear-gradient(180deg, color-mix(in oklab, var(--card) 92%, transparent), color-mix(in oklab, var(--card) 98%, transparent)); border:1px solid var(--border); border-radius:var(--radius); padding:18px}
+    section{padding:28px 20px}
+    h2{font-size:clamp(22px,3vw,32px);margin:0 0 8px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    @media (max-width:900px){ .grid{grid-template-columns:1fr} nav{display:none} }
+    .kicker{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;
+      background:color-mix(in oklab, var(--brand) 20%, transparent); color:color-mix(in oklab, var(--brand) 95%, white); font-weight:700}
+    .contact form{display:grid;gap:10px}
+    input, textarea, select{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--border);background:transparent;color:inherit}
+    textarea{min-height:120px}
+    .foot{border-top:1px solid var(--border);color:var(--muted);font-size:14px}
+    .statbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .stat{border:1px dashed var(--border);border-radius:10px;padding:12px;min-width:140px}
+    .stat b{font-size:20px}
+    .pill{display:inline-block;margin-top:8px;padding:6px 10px;border-radius:999px;background:color-mix(in oklab, var(--accent) 25%, transparent); color:color-mix(in oklab, var(--accent) 90%, white);font-weight:700;font-size:12px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap row">
+      <a class="logo" href="#top" aria-label="FSBI Home">
+        <!-- FSBI Logo -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80">
+          <rect width="280" height="80" rx="12" fill="#0f1320"/>
+          <path d="M50 50V35h10v15h10V30l-15-12-15 12v20h10z" fill="#6f7dff"/>
+          <text x="90" y="50" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#ffffff">FSBI</text>
+          <text x="150" y="50" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#19d4ff">For Sale By Intelligence</text>
+        </svg>
+      </a>
+      <nav aria-label="Primary">
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#contact" class="btn">Contact</a>
+        <a href="#start" class="btn btn--brand">Start FSBO</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <span class="kicker">FSBI — For Sale By Intelligence</span>
+        <h1>AI-powered FSBO for New York City.</h1>
+        <p class="sub">Sell your NYC home without a listing agent. FSBI uses AI agents and LLMs to price, market, screen buyers, assemble co-op/condo board packages, and coordinate with your attorney—so you keep more equity and lose the busywork.</p>
+        <div class="cta">
+          <a href="#start" class="btn btn--brand">Start free</a>
+          <a href="#how" class="btn">See how</a>
+        </div>
+        <div class="statbar">
+          <div class="stat"><b>70–80%</b><div class="sub">Admin time saved</div></div>
+          <div class="stat"><b>24/7</b><div class="sub">Lead concierge</div></div>
+          <div class="stat"><b>NYC-ready</b><div class="sub">Co-op & condo flows</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <h2>How it works</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>1) Price with confidence</h3>
+            <p>AI CMA blends comps, amenities, board-approved sales, and time-on-market to recommend list price and strategy.</p>
+          </div>
+          <div class="card">
+            <h3>2) Market & qualify</h3>
+            <p>Auto-generated listing copy, photo order, and a 24/7 chatbot to answer buyer questions, collect proof of funds, and schedule showings.</p>
+          </div>
+          <div class="card">
+            <h3>3) Close the NYC way</h3>
+            <p>Create term sheets, assemble board packages, track condo ROFR, and coordinate with your licensed NY attorney for contracts & closing.</p>
+          </div>
+        </div>
+        <span class="pill">We’re software, not a law firm or brokerage. Attorneys handle legal work.</span>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="wrap">
+        <h2>Features at a glance</h2>
+        <div class="grid">
+          <div class="card"><strong>AI Pricing & Timing</strong><p>Know when to list, how to counter, and when to accept.</p></div>
+          <div class="card"><strong>Listing Builder</strong><p>Clean copy, floor-plan callouts, and export-ready assets.</p></div>
+          <div class="card"><strong>Lead Concierge</strong><p>Instant Q&A, pre-qual prompts, and calendar booking.</p></div>
+          <div class="card"><strong>Doc Room</strong><p>Disclosures, e-sign, and organized checklists.</p></div>
+          <div class="card"><strong>Co-op/Condo Packages</strong><p>Assemble, validate, and format for submission.</p></div>
+          <div class="card"><strong>Compliance Guardrails</strong><p>Clear handoffs to your attorney for contracts & advice.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="start">
+      <div class="wrap">
+        <h2>Start your FSBO</h2>
+        <div class="card">
+          <form onsubmit="return submitLead(event)" aria-label="Start FSBO form">
+            <label>Property Address
+              <input required name="address" placeholder="123 W 72nd St, Apt 8C" />
+            </label>
+            <label>Email
+              <input required type="email" name="email" placeholder="you@example.com" />
+            </label>
+            <label>Property Type
+              <select required name="type">
+                <option value="">Choose…</option>
+                <option>Co-op</option>
+                <option>Condo</option>
+                <option>Townhouse/Brownstone</option>
+              </select>
+            </label>
+            <button class="btn btn--brand" type="submit">Create my draft ➜</button>
+            <p id="leadMsg" class="sub" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <div class="card">
+          <form onsubmit="return sendMessage(event)" aria-label="Contact form">
+            <label>Name
+              <input required name="name" placeholder="Your name" />
+            </label>
+            <label>Email
+              <input required type="email" name="email" placeholder="you@example.com" />
+            </label>
+            <label>Message
+              <textarea required name="message" placeholder="Tell us about your sale"></textarea>
+            </label>
+            <button class="btn" type="submit">Send</button>
+            <p id="contactMsg" class="sub" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div>© <span id="year"></span> FSBI — For Sale By Intelligence.</div>
+      <div style="margin-top:6px">Disclaimer: FSBI provides software and coordination for FSBO transactions. We are not a law firm or brokerage. Contracts and legal advice are handled by your licensed New York attorney.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    });
+
+    // Year update
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mock form handlers
+    function submitLead(e){
+      e.preventDefault();
+      document.getElementById('leadMsg').textContent = "Thanks! We’ve created your workspace draft and emailed access.";
+      e.target.reset();
+      return false;
+    }
+    function sendMessage(e){
+      e.preventDefault();
+      document.getElementById('contactMsg').textContent = "Got it — we’ll reach out shortly.";
+      e.target.reset();
+      return false;
+    }
+  </script>
+</body>
+</html>
