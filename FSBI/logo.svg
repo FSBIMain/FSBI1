@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80">
+  <rect width="280" height="80" rx="12" fill="#0f1320"/>
+  <path d="M50 50V35h10v15h10V30l-15-12-15 12v20h10z" fill="#6f7dff"/>
+  <text x="90" y="50" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#ffffff">FSBI</text>
+  <text x="150" y="50" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#19d4ff">For Sale By Intelligence</text>
+</svg>
